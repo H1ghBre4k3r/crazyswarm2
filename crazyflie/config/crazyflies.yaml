@@ -1,32 +1,45 @@
 # named list of all robots
 robots:
-  cf231:
+  cf0:
+    enabled: false
+    uri: radio://0/80/2M/E7E7E7E7E1
+    initial_position: [1.0, 0.5, 0.0]
+    type: cf21 # see robot_types
+  cf1:
     enabled: true
-    uri: radio://0/80/2M/E7E7E7E7E7
+    uri: radio://0/80/2M/E7E7E7E7E2
     initial_position: [0.0, 0.0, 0.0]
-    type: cf21  # see robot_types
-    # firmware_params:
-    #   kalman:
-    #     pNAcc_xy: 1.0 # default 0.5
-    # firmware_logging:
-    #   enabled: true
-    #   custom_topics:
-    #     topic_name3: 
-    #       frequency: 1
-    #       vars: ["acc.x", "acc.y"]
+    type: cf21 # see robot_types
+  cf2:
+    enabled: true
+    uri: radio://0/80/2M/E7E7E7E7E3
+    initial_position: [0.0, 0.5, 0.0]
+    type: cf21 # see robot_types
+  cf3:
+    enabled: true
+    uri: radio://0/80/2M/E7E7E7E7E4
+    initial_position: [-0.5, 0.5, 0.0]
+    type: cf21 # see robot_types
+  cf4:
+    enabled: true
+    uri: radio://0/80/2M/E7E7E7E7E5
+    initial_position: [-0.5, 0.0, 0.0]
+    type: cf21 # see robot_types
   cf5:
     enabled: false
-    uri: radio://0/80/2M/E7E7E7E705
-    initial_position: [0.0, -0.5, 0.0]
-    type: cf21  # see robot_types
-    # firmware_params:
-    #   kalman:
-    #     pNAcc_xy: 1.0 # default 0.5
-    #firmware_logging:
-    #  custom_topics:
-    #    topic_name3: 
-    #      frequency: 1
-    #      vars: ["acc.x", "acc.y", "acc.z"]
+    uri: radio://0/80/2M/E7E7E7E7E6
+    initial_position: [0.0, 0.0, 0.0]
+    type: cf21 # see robot_types
+  cf6:
+    enabled: false
+    uri: radio://0/80/2M/E7E7E7E7E7
+    initial_position: [0.5, 0.0, 0.0]
+    type: cf21 # see robot_types
+  cf7:
+    enabled: false
+    uri: radio://0/80/2M/E7E7E7E7E9
+    initial_position: [1.0, 0.0, 0.0]
+    type: cf21 # see robot_types
 # Definition of the various robot types
 robot_types:
   cf21:
@@ -37,7 +50,7 @@ robot_types:
       dynamics: default
     big_quad: false
     battery:
-      voltage_warning: 3.8  # V
+      voltage_warning: 3.8 # V
       voltage_critical: 3.7 # V
     # firmware_params:
     #   kalman:
@@ -48,7 +61,7 @@ robot_types:
     #   pose:
     #     frequency: 1 # Hz
     #   custom_topics:
-    #    topic_name3: 
+    #    topic_name3:
     #      frequency: 1
     #      vars: ["acc.x", "acc.y", "acc.z"]
 
@@ -60,7 +73,7 @@ robot_types:
       dynamics: default
     big_quad: false
     battery:
-      voltage_warning: 3.8  # V
+      voltage_warning: 3.8 # V
       voltage_critical: 3.7 # V
 
     # firmware_params:
@@ -74,7 +87,7 @@ all:
   firmware_logging:
     enabled: true
     default_topics:
-     # remove to disable default topic
+      # remove to disable default topic
       pose:
         frequency: 10 # Hz
       status:
